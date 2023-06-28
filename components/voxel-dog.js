@@ -12,7 +12,7 @@ const VoxelDog = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
-  // const urlDogGLB = (process.env.NODE_ENV === 'production' ? 'https://olliequ.github.io' : '') + '/static/images/dog.glb'
+  const urlDogGLB = (process.env.NODE_ENV === 'production' ? '' : '') + '/dog.glb'
 
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
@@ -71,7 +71,7 @@ const VoxelDog = () => {
       controls.autoRotate = true
       controls.target = target
 
-      loadGLTFModel(scene,  'https://google.com', {
+      loadGLTFModel(scene, urlDogGLB, {
         receiveShadow: false,
         castShadow: false
       }).then(() => {

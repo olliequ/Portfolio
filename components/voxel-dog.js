@@ -71,7 +71,7 @@ const VoxelDog = () => {
       controls.autoRotate = true
       controls.target = target
 
-      loadGLTFModel(scene,  'https://craftzdog.global.ssl.fastly.net/homepage/dog.glb', {
+      loadGLTFModel(scene,  'https://google.com', {
         receiveShadow: false,
         castShadow: false
       }).then(() => {
